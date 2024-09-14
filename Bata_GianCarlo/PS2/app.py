@@ -8,12 +8,12 @@ def append_to_json(filepath, data):
     if not os.path.exists(filepath):
         with open(filepath, "w") as file:
             json.dump([], file, indent=4)
-    else:
-        with open(filepath, "r+") as file:
-            old_data = json.load(file)
-            old_data.append(data)
-            file.seek(0)
-            json.dump(old_data, file, indent=4)
+
+    with open(filepath, "r+") as file:
+        old_data = json.load(file)
+        old_data.append(data)
+        file.seek(0)
+        json.dump(old_data, file, indent=4)
 
 @app.route("/", methods=["GET", "POST"])
 def index():
