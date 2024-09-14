@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+    {% if flag %}
+        <h1>Thank you for responding!</h1>
+        <a href="/">&lt;&lt; Go back</a>
+    {% else %}
+        <form method="POST">
+            <input type="text" id="f_name" name="f_name" placeholder="First Name" required>
+            <input type="text" id="m_name" name="m_name" placeholder="Middle Name" required>
+            <input type="text" id="l_name" name="l_name" placeholder="Last Name" required>
+            <input type="date" id="birthday" name="birthday" placeholder="Birthday" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="text" id="address" name="address" placeholder="Address" required>
+            <input type="submit" value="Submit">
+        </form>
+    {% endif %}
+{% endblock %}
