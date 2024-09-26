@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello, World!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            flex-direction: column; /* Updated to make space for the greeting */
+        }
+
+        h1 {
+            color: #b30b43; 
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #903c3c;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #992731; 
+            color: white;
+            border: none;
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    <!-- Display the greeting if available -->
+    {% if greeting %}
+        <h2>{{ greeting }}</h2>
+    {% endif %}
+    
+    <h1>Hello, World!</h1>
+    <form action="/" method="POST">
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
