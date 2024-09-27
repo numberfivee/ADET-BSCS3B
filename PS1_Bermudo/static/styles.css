@@ -1,9 +1,0 @@
-.container {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to right, #6a11cb, #2575fc);
-    color: white;
-    text-align: center;
-}
